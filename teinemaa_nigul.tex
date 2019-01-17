@@ -1,0 +1,317 @@
+\documentclass{article}
+
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[a4paper,landscape,margin=0.53cm,]{geometry}
+\usepackage{colortbl}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage[super]{nth}
+\usepackage{fontspec}
+\setmainfont{FreeSans}
+\usepackage{graphicx}
+\usepackage{relsize}
+\usepackage{array}
+\usepackage{boldline}
+\usepackage{titlesec}
+\usepackage{amssymb}
+\usepackage{xfrac}
+\usepackage{calc}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+
+\addtolength{\topmargin}{4mm}
+\let\humlaut=\H
+\let\sectsym=\S
+\newcommand\coloredsuitsymbol[3]{\ensuremath{\mathrel{\raisebox{-0.3pt}{{\color{#1}#2}\llap{#3}}}}}
+\newcommand\suitsymbol[3]{\coloredsuitsymbol{#1}{#2}{#3}}%black!24
+\newcommand\C{\suitsymbol{clubcolor}{\filledclub}{\emptyclub}}
+\newcommand\D{\suitsymbol{diamondcolor}{\filleddiamond}{\emptydiamond}}
+\renewcommand\H{\suitsymbol{heartcolor}{\filledheart}{\emptyheart}}
+\renewcommand\S{\suitsymbol{spadecolor}{\filledspade}{\emptyspade}}
+\newcommand\N{\caps{nt}}
+\newcommand\PASS{\caps{Pass}}
+\newcommand\X{\caps{Dbl}}
+\newcommand\XX{\caps{Rdbl}}
+\newcommand\caps[1]{{\scshape#1}}
+\newcommand\hcp{\caps{hcp}}
+\newcommand\Min{\caps{min}}
+\newcommand\Max{\caps{max}}
+\newcommand\GF{\caps{gf}}
+\newcommand\NF{\caps{nf}}
+\newcommand\VUL{\caps{vul}}
+\newcommand\NV{\caps{nv}}
+\newcommand\TRF{\caps{Trf}}
+\newcommand\INV{\caps{inv}}
+\newcommand\PRE{\caps{pre}}
+\newcommand\NAT{\caps{nat}}
+\newcommand\takeout{\caps{t/o}}
+\newcommand\CUE{\caps{Cue}}
+
+
+
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\filledheart}{\mathalpha}{extraup}{86}
+\DeclareMathSymbol{\filleddiamond}{\mathalpha}{extraup}{87}
+\DeclareMathSymbol{\filledspade}{\mathalpha}{extraup}{81}
+\DeclareMathSymbol{\filledclub}{\mathalpha}{extraup}{84}
+\DeclareMathSymbol{\emptyheart}{\mathalpha}{extraup}{82}
+\DeclareMathSymbol{\emptydiamond}{\mathalpha}{extraup}{83}
+\DeclareMathSymbol{\emptyspade}{\mathalpha}{extraup}{85}
+\DeclareMathSymbol{\emptyclub}{\mathalpha}{extraup}{88}
+\newcommand\more{\ensuremath{^+}}
+\newcommand\tick{\ensuremath{\surd}}
+\newcommand\alert{\makebox[1.0em][c]{\hspace{-0.5ex}
+	\makebox[0pt][c]{\raisebox{0em}{\scriptsize!}}%
+	\makebox[0pt][c]{\raisebox{-.1em}{\color{red}\large$\bigtriangleup$}}}}%
+
+\definecolor{spadecolor}{rgb}{0,0,0.75}
+\definecolor{heartcolor}{rgb}{0.75,0,0}
+\definecolor{diamondcolor}{rgb}{1,0.5,0}
+\definecolor{clubcolor}{rgb}{0.25,0.5,0}
+\definecolor{titlegray}{Hsb}{0,0,0.8}
+
+\newcolumntype{M}[1]{>{\raggedright\arraybackslash}m{#1}}
+%\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\titleformat{\section}{\large\bfseries\scshape}{\thesection.}{0.5em}{\mysectiontitle}
+\newcommand{\mysectiontitle}[1]{\colorbox{titlegray}{\parbox{\dimexpr\textwidth-2\fboxsep}{\centerline{#1}}}\vspace{-2.1ex}}
+
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection.}{0.5em}{\mysubsectiontitle}
+\newcommand{\mysubsectiontitle}[1]{%
+    \raisebox{0.44ex}{\rule{\textwidth}{0.08em}}\vspace{-0.44ex}
+    \raisebox{0ex}[0pt][1ex]{\centerline{#1}}\vspace{-1.9ex}
+    \thinrule
+}
+\titlespacing{\subsection}{0pt}{-2ex}{*0}
+\newcommand{\smallsection}[1]{\vspace{-1ex}\subsection*{#1}\raggedright}
+
+\setlength{\parindent}{0pt}
+\setlength\tabcolsep{0pt}
+\renewcommand{\arraystretch}{1.124}
+\setlength{\aboverulesep}{-.1ex}
+\setlength{\belowrulesep}{.3ex}
+\setlength{\lightrulewidth}{\arrayrulewidth}
+\newcommand{\thinrule}{\rule{\textwidth}{\arrayrulewidth}}
+\newcommand{\myendrule}{\vspace{-1.5ex}\thinrule}
+
+\begin{document}
+\begin{minipage}[t]{90mm}
+\section*{Defensive and Competitive Bidding}
+\smallsection{Overcalls}
+	\nth{1} level (4)5\more cards, 8-16 \hcp \rightarrow \sfrac{1}{1}\caps{resp}=F1; \sfrac21\caps{resp}=\caps{NF}\\
+	\quad fit-jumps, \caps{oppt} suit=\caps{inv} to 4M;\\
+	\nth{2} level 5\more cards, 11-17 \hcp \rightarrow new suit=F1\\ 
+	\caps{Trf-Leb} after: {\smaller(1M/P)-\X/1\D/1\N-(2\D M)-?, (1m/M/P)-(2M)-\X-?}:\\
+	\quad2y=\caps{nf}; 2\N=any weak or clubs; 3\C\D\H=\TRF\ \caps{inv\more}; \\
+	\quad3\S=\caps{Trf}\ to 3\N; \TRF\ to \caps{oppt} suit=\caps{Stay} \GF\\
+	\caps{Trf} after 2\C-(2M): 2\N/3\C=\C; 3\S=\D\GF\\
+	\caps{Leb} after 2\D-(2M): 2\N=\caps{Leb}; 3\C/\D=\caps{inv\more}/\caps{nf}; 3\H/\S=\H/\C\GF\\
+\smallsection{1\N\ Overcall} 
+	\VUL15-18, \NV 14-17, \sfrac12\more \caps{stop}\rightarrow \TRF s; \TRF\ to \caps{oppt} M=\caps{Stay}\\
+	Reopen: 1\N=11-15, 0+\caps{stop}; 2\N=19-21 
+\smallsection{Jump Overcalls} 
+	Weak\rightarrow  new suit=\INV; 2\N=relay\\
+	2\N=two lowest suits; Over 1m=\caps{nat}: 2\D=5\more4\more MM, 8-11. \\
+	Reopen: intermediate
+\smallsection{Direct \& Jump Cue Bids} 
+	Over 1M: 2M=oM+m, 10\more\rightarrow 2\N=relay; 3\C=P/C; 3\D=\INV\ M.\\
+	3M=ask stopper for 3\N, usually with running suit
+\smallsection{Vs NT} 
+	\caps{Asptro}: \X=(14)16\more; 2\H\S=6 cards, 8-15; \\
+	\quad 2\C/\D=4-5\H/\S\ \caps{unbal}, 10-15, (if MM, we bid shorter first);\\
+	% \sout{\quad 2\N=6-5 same rank/color, \INV\more}\\
+	Passed hand: \X=5+m\\
+	Over (1M)-(1\N): direct \X=\takeout; 2M=oM+m\\
+	\quad Reopen: \X=\NAT; others=\NAT
+\smallsection{Vs Preempts} 
+	\X=\takeout\ thru 4\H, cards higher. \CUE=ask stopper.\\
+	\caps{Trf-Leb} after (2x)-\X. (2M)-4m=m+oM. 3\N-4\C=(R) w/\caps{bal}\\
+	Over Multi 2\D: \X=\takeout\ of \S; 2\N=16-19; 4m=\H+m
+\smallsection{Vs Artificial Strong Openings} 
+	Over 1m, 1\C-1\D: \X=5-4 MM, 10\more; 1\N=5-4 mm\\
+	\quad2\N=good hand w/ one-suiter or minors\\
+	Over 2m: \X=MM; 2\N=mm
+\smallsection{Over Opponents' Takeout Double}
+	\XX=10+\hcp; \nth{1} level=F1; \nth{2} level=\NF\\
+	Over 1\C-(\X): \XX=\NAT\ \GF; 1\D=5-8\rightarrow\NAT\ continuations\\
+	Over 1\N(14-17)-(\X): system on\\
+\myendrule
+\end{minipage}
+\hfill
+\begin{minipage}[t]{90mm}
+\section*{Leads and Signals}
+\smallsection{Opening Leads Style}
+	\begin{tabular}{ >{\bfseries}p{20mm} p{35mm} p{35mm} }
+		& Lead & In Partner's Suit \\ \midrule
+		Suit & \nth{3}/\nth{5} & \multirow{2}{32mm}{\nth{1}/\nth{3}} \\
+		NT & \nth{2}/\nth{4} &  \\ 
+		Subseq &  \nth{3}/\caps{att}& \\ 
+	\end{tabular}
+	When count in partner's suit is known: Lo=\caps{enc}
+\smallsection{Leads}
+	\begin{tabular}{ >{\bfseries}p{20mm} p{35mm} p{35mm} }
+		& Vs Suit & Vs NT \\ \midrule
+		Ace & Ax, AK+ & Asks \caps{att}\\ 
+		King &  KQ+ & Asks count or unblock\\ 
+		Queen & QJ+, maybe AKQ & QJ+, KQx+, AQJ+\\ 
+		Jack & JT+, KJ10+ & J10+, HJ10+ \\ 
+		10 & 109+, H109+ & 109+, H109+\\ 
+		9 & KJ9, 9x & H9x \\ 
+		Hi-x & Xx, xxxx & HXx, xXx, xXxx \\ 
+		Lo-x & xxX, HxX & xX, HxxX(x) \\
+	\end{tabular}
+\vspace{-1ex}
+\smallsection{Signals in Order of Priority}\vspace{-.5ex}
+	\begin{tabular}{ >{\bfseries}p{10mm} p{7mm}  p{27mm}  p{27mm}  p{19mm} }
+		& & Partner's Lead & Declarer's Lead & Discarding \\ \midrule
+		\multirow{3}{*}{Suit}& 1 & Lo=\caps{enc} or xx & Hi=\caps{even} & S/P\\ 
+		 & 2 & Hi=\caps{even} & & Hi=\caps{even} \\ 
+		& 3 & S/P & & \\ \midrule
+		\multirow{2}{*}{NT} & 1 & Lo=\caps{enc} & Smith & S/P\\ 
+		& 2 & Hi=\caps{even}& Hi=\caps{even} & Hi=\caps{even}\\ \midrule
+	\end{tabular}\\
+	Smith: \caps{enc} Low from leader, Hi from partner\\ 
+	Italian S/P: odd=\caps{enc}, even=Hi/Lo\\\vspace{.5ex}
+\section*{Doubles}
+\smallsection{Takeout Doubles} 
+	11-15 negative or 16\more any; Equal level conversion to \D \& \H.\\
+	\CUE=F1, jump to \nth{2}=8-10, 5-cards; (2x)-\X-2NT=\caps{Trf-Leb}\\
+	Reopen: \takeout\ 9-14 or 15\more
+\smallsection{Miscellaneous Doubles/Redoubles}
+	\takeout\ thru 4\H, higher=cards; 1\D-(1\H)-\X=4\S\\
+	\caps{Supp}\X\ thru ``2M-1''; \X\ to \caps{oppt} \CUE=A/K/Q;\\ 
+	Often \X=extras/competitive from \NF\ hand;\\
+	(1\N=\caps{weak})-(\caps{art} bid)-\X=cards;  Lightner \X\\
+	Over \TRF: \X=same as \X\ to \NAT\ bid, but \caps{ld} if \GF\\
+	Over 3\N: \caps{ld} for \nth{2} priority: \nth{3}/\nth{1}/unbid/\nth{2}/\nth{4} hand suit\\
+\myendrule
+\end{minipage}
+\hfill
+\begin{minipage}[t]{90mm}
+\section*{Wbf Convention Card \includegraphics[width=4mm]{logo.png}}\ \\
+\begin{tabular}{p{20mm}p{70mm}}
+\textbf{\caps{Category}} & \mbox{\color{spadecolor}Ranna ruutu} \\
+\textbf{\caps{Country}} & Estonia \\
+\textbf{\caps{Version}} & 2018-11\\
+\textbf{\caps{Players}} & Irene {Teinemaa} \caps{} --- Hendrik {Nigul} \caps{} \\
+\end{tabular}
+\section*{System Summary}
+\smallsection{General Approach and Style}
+	Strong 1\C, precision 2\C, nebulous 1\D, 5-card majors\\
+	1\N: 14-16, 2\N: 20-21\\
+	\qquad 5-card major, 6-card minor, stiff honor possible\\
+	In competition: \nth{1} level=F1, \nth{2} level=\NF, \nth{3} level=\GF\\
+	\sfrac{2}{1}\caps{resp}=\GF\ unless suit rebid\\
+	~\\
+\smallsection{Special Bids That May Require Defence} 
+	1\D=(0)1\more\D, 11-15\\
+	3\N=Gambling (max Q outside)\\
+	~\\
+\smallsection{Special Forcing Pass sequences} 
+	After our \XX\ or \caps{pen}-\X\ or we have \GF\\
+	After our 1\C\ \caps{oppt} overcalls 4\H \more\\
+	In FP situations: \X=\caps{pen}/no extras; Bid=extra shape;\\
+	\quad Pass+Bid=extra values, unsure about contract
+~\\
+\smallsection{Important Notes}
+	\hcp\ \& suit lengths are subject to judgement in any situation\\
+\smallsection{Psychics} 
+	Happens if \nth{3} seat, \NV\ vs \VUL, against multi\\
+	or after \caps{pre} with great fit\\
+\myendrule
+\end{minipage}
+\newpage
+\definecolor{titlecellgray}{rgb}{1,1,1}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{ M{8mm} M{10mm} R{7mm} !{\hspace{2mm}} M{10mm}  M{53mm}  M{80mm}  M{80mm} M{35mm} }%
+\toprule
+	\cellcolor{titlecellgray} & \makebox[\widthof{\textbf{Open}}-8mm][r]{\cellcolor{titlecellgray}\textbf{Open}} &\cellcolor{titlecellgray}\textbf{Min Crd} & \cellcolor{titlecellgray} \textbf{Neg Dbl} & \cellcolor{titlecellgray} \textbf{Description} & \cellcolor{titlecellgray} \textbf{Responses} & \cellcolor{titlecellgray} \textbf{Subsequent Auction} & \cellcolor{titlecellgray} \textbf{Passed Hand Bidding} \\
+\midrule
+	1\C  & \alert & 0 &4\H& a) \caps{Bal} 17\more\newline b) \caps{Unbal} (12)16\more/4$^-$ losers 
+		& 1\D=0-7; 1\H\S2\C\D=5-cards, 8\more; 1\N=8-11/14\more; \newline2\H\S=6-cards, 4-7; 2\N=12-13; 3\C\D\H\S=8\more, 4441
+		& 1\C-1\D-1\H=20\more, F1\rightarrow 1\S=0-4
+		& \\ 
+	1\D & \alert & (0)1 &4\H&a) \caps{Bal} 11-13 b) \caps{Unbal} 11-15 4\more{\D}/441\D4 
+		& 1\H\S=4\more cards, F1; 1\N/2\N=\NAT; 2\C\D=4\more F1;\newline2\H\S3\C\D=GF w/ good suit, 3\H\S=\INV
+		& 1\D-1M-1X-?: 2\C=\caps{pup} to 2\D (\INV); 2\D=\GF\ relay; \newline 2\N=\C
+		& 2\D is still \GF \\ 
+	1\H &&5&3\S&11-15&2\N=\GF 4\more\caps{supp}; 3\C=4\caps{supp} \INV; 3\D=3\caps{supp} \INV\newline 2\C/\D=4\more F1; 2\S=\GF
+		& After 2\N: \NAT\ responses, 3\S\more=\caps{Spl}
+		& 2\C=Drury \rightarrow 2\D=\Min; Fit-jumps \\  
+	1\S &&5&4\H&11-15&3\H=\GF; & \\  
+	1\N &&&4\H&14-16, 5M possible
+		&2\C=\caps{Stay}; 2\D\H=\TRF; 2\S=\C or \INV; 3\C\D=\INV; 3\H\S=31(54) \GF 
+		&After 2\S/2NT: 3\C=\Max; After \TRF\ new suit=\INV\more\newline1\N-2\C-2\N=44 majors\rightarrow\TRF; \caps{Smolen}
+		&\\ 
+	2\C &&5&4\H&10-15 a) 5\C+4M b) 6\more\C 
+		&2\D=(R); 2M=8-12\NF; 2\N=weak raise OR special hand; \nth{3} level=\INV
+		&2\C-2\D: 2\H\S=4 cards; 2\N=\Max\rightarrow 3\C=ask shortage;\newline3\C=\Min\rightarrow 3\D=ask; \sout{2\C-2\N-3\C-3\D=\INV\ 5-5 majors}  
+		&\\ 
+	2\D\H\S &&(5)6&&[1/2/3] (3)5-10, [4] 10-13
+		&2M=\NF; 2\N=Ogust relay&After 2\N: 3\C\D=\Min; 3\C\H=KJxxxx or worse & \\ 
+	2\N &&&&20-21&3\C=Puppet Stayman; 3\S=6\more minor OR 5-4 minors&& \\  
+	3\C\D\H\S &&(6)7&&Preempt&new suit: \NV=\INV, \VUL=F1; \sout{4\C=MiniKC}&& \\ 
+	3\N &\alert&&&AKQxxxx in \C/\D, no side A/K&4\C=\caps{P/C}; 4\D=(R); 4\N=asks quality opposite void&& \\ 
+	4\C\D\H\S &&&&Preempt&&& \\ 
+	4\N &&&&6-6 minors, slam interest&&& \\ 
+	\midrule
+\end{tabular}
+
+\begin{minipage}[t]{90mm}
+\smallsection{High Level Bidding}
+\caps{Rkcb} 14 30 2 2+Q; 5\N=2/4 w/void; 6x=1/3 w/void\\
+After \caps{Rkc}: [+1]=Asks Q \rightarrow\ no Q, Q+0K, Q+1K, \ldots\\
+If opps interfere, \PASS=\nth{1} step; \\
+\quad If no control was implied, show/ask control first\\
+\quad \X\ is \caps{pen} from captain only; \XX\ is never natural\\
+Jump to \nth{5} level=Voidwood 0123\\
+5\N\ is often pick-a-slam\\
+After 3\N: 4m=\caps{MinRkc}\rightarrow[+1]=\Min; higher=\caps{Rkc} steps\\
+\myendrule
+\end{minipage}
+\hfill
+\begin{minipage}[t]{90mm}
+\smallsection{Additional Notes}
+%\newcommand{\mycell}[1]{\cellcolor{black!#1}\qquad#1}\begin{tabular}{llllll}\cellcolor{titlegray}cell & \mycell{18} & \mycell{20} & \mycell{22} & \mycell{24} & \mycell{26}\end{tabular}
+%~\\
+%\myendrule
+\end{minipage}
+\hfill
+\rotatebox{90}{\hspace{-57mm}\begin{minipage}[t]{57mm}
+\raggedleft\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}[t]{@{}m{3.6em}R{2.2em}R{3em}R{3em}R{3em}R{3em}@{}}\toprule
+VP & \multicolumn{5}{c}{Imps for boards} \\\cmidrule{2-6}
+ & 1 & 6 & 8 & 10 & 16 \\ \midrule
+11:9 & 0,8 & 2,0 & 2,3 & 2,6 & 3,3 \\
+12:8 & 1,7 & 4,2 & 4,9 & 5,4 & 6,9 \\
+13:7 & 2,7 & 6,6 & 7,6 & 8,6 & 10,8 \\
+14:6 & 3,8 & 9,3 & 10,7 & 12,0 & 15,2 \\
+15:5 & 5,0 & 12,2 & 14,1 & 15,8 & 20,0 \\
+16:4 & 6,4 & 15,6 & 18,0 & 20,1 & 25,5 \\
+17:3 & 8,0 & 19,5 & 22,5 & 25,1 & 31,8 \\
+18:2 & 9,8 & 24,0 & 27,8 & 31,0 & 39,3 \\
+19:1 & 12,1 & 29,6 & 34,2 & 38,2 & 48,3 \\
+20:0 & 15,0 & 36,7 & 42,4 & 47,4 & 60,0 \\ \bottomrule
+\end{tabular}
+\end{minipage}
+}
+\end{document}
+
+\newpage
+\begin{multicols*}{2}
+\section*{Section A: Conventions Used}
+\section*{Section B: Leads and Signals}
+\section*{Section C: Bids That May Require a Defence}
+\section*{Section D: Defensive and competitive bidding}
+\section*{Section E: Doubles}
+\section*{Section F: Back of Card}
+\section*{Section G: Others}
+\section*{Section H: Prepared Defences}
+\end{multicols*}
+
+\end{document}
