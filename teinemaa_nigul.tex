@@ -8,7 +8,6 @@
 \usepackage{tikz}
 \usepackage[super]{nth}
 \usepackage{fontspec}
-\setmainfont{FreeSans}
 \usepackage{graphicx}
 \usepackage{relsize}
 \usepackage{array}
@@ -21,6 +20,8 @@
 \usepackage{makecell}
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
+\setmainfont{FreeSans}
+
 
 \addtolength{\topmargin}{4mm}
 \let\humlaut=\H
@@ -78,7 +79,7 @@
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \titleformat{\section}{\large\bfseries\scshape}{\thesection.}{0.5em}{\mysectiontitle}
-\newcommand{\mysectiontitle}[1]{\colorbox{titlegray}{\parbox{\dimexpr\textwidth-2\fboxsep}{\centerline{#1}}}\vspace{-2.1ex}}
+\newcommand{\mysectiontitle}[1]{\colorbox{titlegray}{\parbox{\dimexpr\textwidth-2\fboxsep}{\centerline{#1}}}\vspace{-1.7ex}}
 
 \titleformat{\subsection}{\normalfont\bfseries}{\thesubsection.}{0.5em}{\mysubsectiontitle}
 \newcommand{\mysubsectiontitle}[1]{%
@@ -109,6 +110,7 @@
 	\quad2y=\caps{nf}; 2\N=any weak or clubs; 3\C\D\H=\TRF\ \caps{inv\more}; \\
 	\quad3\S=\caps{Trf}\ to 3\N; \TRF\ to \caps{oppt} suit=\caps{Stay} \GF\\
 	\caps{Trf} after 2\C-(2M): 2\N/3\C=\C; 3\S=\D\GF\\
+	\TRF\ after (1m/Pass)–Dbl/1NT–(2\C/3\C) and (2\C/3\C)–\X\\
 	\caps{Leb} after 2\D-(2M): 2\N=\caps{Leb}; 3\C/\D=\caps{inv\more}/\caps{nf}; 3\H/\S=\H/\C\GF\\
 \smallsection{1\N\ Overcall} 
 	\VUL15-18, \NV 14-17, \sfrac12\more \caps{stop}\rightarrow \TRF s; \TRF\ to \caps{oppt} M=\caps{Stay}\\
@@ -119,14 +121,15 @@
 	Reopen: intermediate
 \smallsection{Direct \& Jump Cue Bids} 
 	Over 1M: 2M=oM+m, 10\more\rightarrow 2\N=relay; 3\C=P/C; 3\D=\INV\ M.\\
-	3M=ask stopper for 3\N, usually with running suit
+	\quad 3M=ask stopper for 3\N, usually with running suit\\
+	Over 2\C: 3\C=MM; 4\C=\D+\H
 \smallsection{Vs NT} 
 	\caps{Asptro}: \X=(14)16\more; 2\H\S=6 cards, 8-15; \\
 	\quad 2\C/\D=4-5\H/\S\ \caps{unbal}, 10-15, (if MM, we bid shorter first);\\
 	% \sout{\quad 2\N=6-5 same rank/color, \INV\more}\\
 	Passed hand: \X=5+m\\
-	Over (1M)-(1\N): direct \X=\takeout; 2M=oM+m\\
-	\quad Reopen: \X=\NAT; others=\NAT
+	Over (1M)-(1\N): direct \X=\takeout; 2M=oM+m;
+	\ Reopen: \NAT
 \smallsection{Vs Preempts} 
 	\X=\takeout\ thru 4\H, cards higher. \CUE=ask stopper.\\
 	\caps{Trf-Leb} after (2x)-\X. (2M)-4m=m+oM. 3\N-4\C=(R) w/\caps{bal}\\
@@ -136,8 +139,9 @@
 	\quad2\N=good hand w/ one-suiter or minors\\
 	Over 2m: \X=MM; 2\N=mm
 \smallsection{Over Opponents' Takeout Double}
-	\XX=10+\hcp; \nth{1} level=F1; \nth{2} level=\NF\\
 	Over 1\C-(\X): \XX=\NAT\ \GF; 1\D=5-8\rightarrow\NAT\ continuations\\
+	Over 1\D: \TRF\ from \XX=\H;\\
+	Over 1M: \XX=10+\hcp, F2M; \TRF\ from 1\N=\C; 3x=fit-jump\\
 	Over 1\N(14-17)-(\X): system on\\
 \myendrule
 \end{minipage}
@@ -158,9 +162,9 @@
 		Ace & Ax, AK+ & Asks \caps{att}\\ 
 		King &  KQ+ & Asks count or unblock\\ 
 		Queen & QJ+, maybe AKQ & QJ+, KQx+, AQJ+\\ 
-		Jack & JT+, KJ10+ & J10+, HJ10+ \\ 
-		10 & 109+, H109+ & 109+, H109+\\ 
-		9 & KJ9, 9x & H9x \\ 
+		Jack & JT+ & J10+ \\ 
+		10 & 109+, KJ10+ & 109+, HJ10+ \\ 
+		9 & KJ9, H109+, 9x & H9x, H109+ \\ 
 		Hi-x & Xx, xxxx & HXx, xXx, xXxx \\ 
 		Lo-x & xxX, HxX & xX, HxxX(x) \\
 	\end{tabular}
@@ -194,9 +198,9 @@
 \begin{minipage}[t]{90mm}
 \section*{Wbf Convention Card \includegraphics[width=4mm]{logo.png}}\ \\
 \begin{tabular}{p{20mm}p{70mm}}
-\textbf{\caps{Category}} & \mbox{\color{spadecolor}Ranna ruutu} \\
+\textbf{\caps{Category}} & \mbox{\color{spadecolor}Strong club} \\
 \textbf{\caps{Country}} & Estonia \\
-\textbf{\caps{Version}} & 2018-11\\
+\textbf{\caps{Version}} & 2019-02\\
 \textbf{\caps{Players}} & Irene {Teinemaa} \caps{} --- Hendrik {Nigul} \caps{} \\
 \end{tabular}
 \section*{System Summary}
@@ -233,14 +237,14 @@
 \midrule
 	1\C  & \alert & 0 &4\H& a) \caps{Bal} 17\more\newline b) \caps{Unbal} (12)16\more/4$^-$ losers 
 		& 1\D=0-7; 1\H\S2\C\D=5-cards, 8\more; 1\N=8-11/14\more; \newline2\H\S=6-cards, 4-7; 2\N=12-13; 3\C\D\H\S=8\more, 4441
-		& 1\C-1\D-1\H=20\more, F1\rightarrow 1\S=0-4
+		& 1\C-1\D-1\H=20\more, F1\rightarrow 1\S=0-4\newline\X=5–8/5\more/\GF\ takeoutish on \nth{1}/\nth{2}/\nth{3} level
 		& \\ 
 	1\D & \alert & (0)1 &4\H&a) \caps{Bal} 11-13 b) \caps{Unbal} 11-15 4\more{\D}/441\D4 
-		& 1\H\S=4\more cards, F1; 1\N/2\N=\NAT; 2\C\D=4\more F1;\newline2\H\S3\C\D=GF w/ good suit, 3\H\S=\INV
+		& 1\H\S=4\more cards, F1; 1\N/2\N=\NAT; 2\C\D=4\more F1;\newline2\H\S=5\more\S+4\more\H, weak/inv; 3\C=5-4 mm, pre; 3\D= 6\more, pre; 3\H\S=\INV
 		& 1\D-1M-1X-?: 2\C=\caps{pup} to 2\D (\INV); 2\D=\GF\ relay; \newline 2\N=\C
 		& 2\D is still \GF \\ 
-	1\H &&5&3\S&11-15&2\N=\GF 4\more\caps{supp}; 3\C=4\caps{supp} \INV; 3\D=3\caps{supp} \INV\newline 2\C/\D=4\more F1; 2\S=\GF
-		& After 2\N: \NAT\ responses, 3\S\more=\caps{Spl}
+	1\H &&5&3\S&11-15&2\N=\INV\more 4\more\caps{supp}; 3\C=4\caps{supp} mix-raise; 3\D=3\caps{supp} \INV\newline 2\C/\D=4\more F1; 2\S=\GF
+		& After 2\N: 3\C\D\H=\caps{max}/\caps{med}/\caps{min}; 3\S=Hi void;
 		& 2\C=Drury \rightarrow 2\D=\Min; Fit-jumps \\  
 	1\S &&5&4\H&11-15&3\H=\GF; & \\  
 	1\N &&&4\H&14-16, 5M possible
@@ -249,10 +253,11 @@
 		&\\ 
 	2\C &&5&4\H&10-15 a) 5\C+4M b) 6\more\C 
 		&2\D=(R); 2M=8-12\NF; 2\N=weak raise OR special hand; \nth{3} level=\INV
-		&2\C-2\D: 2\H\S=4 cards; 2\N=\Max\rightarrow 3\C=ask shortage;\newline3\C=\Min\rightarrow 3\D=ask; \sout{2\C-2\N-3\C-3\D=\INV\ 5-5 majors}  
+		&2\C-2\D: 2\H\S=4 cards; 2\N=\Max\rightarrow 3\C=ask shortage;\newline3\C=\Min\rightarrow 3\D=ask; 2\C-2\N-3\C-3\D=\D+\H \GF;  
 		&\\ 
 	2\D\H\S &&(5)6&&[1/2/3] (3)5-10, [4] 10-13
-		&2M=\NF; 2\N=Ogust relay&After 2\N: 3\C\D=\Min; 3\C\H=KJxxxx or worse & \\ 
+		&2M=\NF; 2\N=Ogust relay&After 2\N\ \VUL: 3\C\D=\Min; 3\C\H=KJxxxx or worse\newline
+		\quad \NV: 3\C=5; 3\D\H\S=\caps{min/med/max}; 3\N=\caps{max}, 3\more other M& \\ 
 	2\N &&&&20-21&3\C=Puppet Stayman; 3\S=6\more minor OR 5-4 minors&& \\  
 	3\C\D\H\S &&(6)7&&Preempt&new suit: \NV=\INV, \VUL=F1; \sout{4\C=MiniKC}&& \\ 
 	3\N &\alert&&&AKQxxxx in \C/\D, no side A/K&4\C=\caps{P/C}; 4\D=(R); 4\N=asks quality opposite void&& \\ 
