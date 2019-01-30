@@ -22,7 +22,6 @@
 \usepackage[normalem]{ulem}
 \setmainfont{FreeSans}
 
-
 \addtolength{\topmargin}{4mm}
 \let\humlaut=\H
 \let\sectsym=\S
@@ -100,6 +99,7 @@
 \newcommand{\myendrule}{\vspace{-1.5ex}\thinrule}
 
 \begin{document}
+
 \begin{minipage}[t]{90mm}
 \section*{Defensive and Competitive Bidding}
 \smallsection{Overcalls}
@@ -172,14 +172,15 @@
 \smallsection{Signals in Order of Priority}\vspace{-.5ex}
 	\begin{tabular}{ >{\bfseries}p{10mm} p{7mm}  p{27mm}  p{27mm}  p{19mm} }
 		& & Partner's Lead & Declarer's Lead & Discarding \\ \midrule
-		\multirow{3}{*}{Suit}& 1 & Lo=\caps{enc} or xx & Hi=\caps{even} & S/P\\ 
+		\multirow{3}{*}{Suit}& 1 & Lo=\caps{enc} (or xx) & Hi=\caps{even} & S/P\\ 
 		 & 2 & Hi=\caps{even} & & Hi=\caps{even} \\ 
 		& 3 & S/P & & \\ \midrule
 		\multirow{2}{*}{NT} & 1 & Lo=\caps{enc} & Smith & S/P\\ 
 		& 2 & Hi=\caps{even}& Hi=\caps{even} & Hi=\caps{even}\\ \midrule
 	\end{tabular}\\
-	Smith: \caps{enc} Low from leader, Hi from partner\\ 
-	Italian S/P: odd=\caps{enc}, even=Hi/Lo\\\vspace{.5ex}
+	Smith: \caps{enc} Low from leader, Hi from partner\\
+	Italian S/P: odd=\caps{enc}, even=Hi/Lo. \\
+	We use S/P at trick 1, if 6-card suit is known\\\vspace{.5ex}
 \section*{Doubles}
 \smallsection{Takeout Doubles} 
 	11-15 negative or 16\more any; Equal level conversion to \D \& \H.\\
@@ -199,9 +200,9 @@
 \section*{Wbf Convention Card \includegraphics[width=4mm]{logo.png}}\ \\
 \begin{tabular}{p{20mm}p{70mm}}
 \textbf{\caps{Category}} & \mbox{\color{spadecolor}Strong club} \\
-\textbf{\caps{Country}} & Estonia \\
-\textbf{\caps{Version}} & 2019-02\\
-\textbf{\caps{Players}} & Irene {Teinemaa} \caps{} --- Hendrik {Nigul} \caps{} \\
+\textbf{\caps{Country}} &  { \makebox[5mm]{\raisebox{-1mm}[0pt][0pt]{\includegraphics[width=5mm]{estonia.png}}}} Estonia \\
+\textbf{\caps{Version}} & European Mixed Team Chamionships 2019\\
+\textbf{\caps{Players}} & Irene {Teinemaa} --- Hendrik {Nigul} \\
 \end{tabular}
 \section*{System Summary}
 \smallsection{General Approach and Style}
@@ -229,9 +230,11 @@
 \myendrule
 \end{minipage}
 \newpage
+\begin{flushright} Estonia {\makebox[5mm]{\raisebox{-1mm}[0pt][0pt]{\includegraphics[width=5mm]{estonia.png}}}} Irene {Teinemaa} --- Hendrik {Nigul} \end{flushright}
+\vspace{-2mm}
 \definecolor{titlecellgray}{rgb}{1,1,1}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ M{8mm} M{10mm} R{7mm} !{\hspace{2mm}} M{10mm}  M{53mm}  M{80mm}  M{80mm} M{35mm} }%
+\begin{tabular}{ M{8mm} M{10mm} R{7mm} !{\hspace{2mm}} M{10mm}  M{54.3mm}  M{80mm}  M{80mm} M{35mm} }%
 \toprule
 	\cellcolor{titlecellgray} & \makebox[\widthof{\textbf{Open}}-8mm][r]{\cellcolor{titlecellgray}\textbf{Open}} &\cellcolor{titlecellgray}\textbf{Min Crd} & \cellcolor{titlecellgray} \textbf{Neg Dbl} & \cellcolor{titlecellgray} \textbf{Description} & \cellcolor{titlecellgray} \textbf{Responses} & \cellcolor{titlecellgray} \textbf{Subsequent Auction} & \cellcolor{titlecellgray} \textbf{Passed Hand Bidding} \\
 \midrule
@@ -241,7 +244,7 @@
 		& \\ 
 	1\D & \alert & (0)1 &4\H&a) \caps{Bal} 11-13 b) \caps{Unbal} 11-15 4\more{\D}/441\D4 
 		& 1\H\S=4\more cards, F1; 1\N/2\N=\NAT; 2\C\D=4\more F1;\newline2\H\S=5\more\S+4\more\H, weak/inv; 3\C=5-4 mm, pre; 3\D= 6\more, pre; 3\H\S=\INV
-		& 1\D-1M-1X-?: 2\C=\caps{pup} to 2\D (\INV); 2\D=\GF\ relay; \newline 2\N=\C
+		& 1\D-1M-1X-?: 2\C=\caps{pup} to 2\D (\INV); 2\D=\GF\ relay; \newline 2\N=\C; 1\D-2M-2NT=ask \H length
 		& 2\D is still \GF \\ 
 	1\H &&5&3\S&11-15&2\N=\INV\more 4\more\caps{supp}; 3\C=4\caps{supp} mix-raise; 3\D=3\caps{supp} \INV\newline 2\C/\D=4\more F1; 2\S=\GF
 		& After 2\N: 3\C\D\H=\caps{max}/\caps{med}/\caps{min}; 3\S=Hi void;
@@ -257,7 +260,7 @@
 		&\\ 
 	2\D\H\S &&(5)6&&[1/2/3] (3)5-10, [4] 10-13
 		&2M=\NF; 2\N=Ogust relay&After 2\N\ \VUL: 3\C\D=\Min; 3\C\H=KJxxxx or worse\newline
-		\quad \NV: 3\C=5; 3\D\H\S=\caps{min/med/max}; 3\N=\caps{max}, 3\more other M& \\ 
+		\quad \NV: 3\C=5; 3\D\H=6 \caps{min}; 3\D\S=wo/ 3 in oM& \\ 
 	2\N &&&&20-21&3\C=Puppet Stayman; 3\S=6\more minor OR 5-4 minors&& \\  
 	3\C\D\H\S &&(6)7&&Preempt&new suit: \NV=\INV, \VUL=F1; \sout{4\C=MiniKC}&& \\ 
 	3\N &\alert&&&AKQxxxx in \C/\D, no side A/K&4\C=\caps{P/C}; 4\D=(R); 4\N=asks quality opposite void&& \\ 
