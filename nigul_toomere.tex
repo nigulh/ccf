@@ -49,7 +49,7 @@
 \newcommand\NAT{\caps{nat}}
 \newcommand\takeout{\caps{t/o}}
 \newcommand\CUE{\caps{Cue}}
-
+\newcommand\bs{\mbox{\color{brownsticker}Brown sticker}}
 
 
 \DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
@@ -72,6 +72,7 @@
 \definecolor{diamondcolor}{rgb}{1,0.5,0}
 \definecolor{clubcolor}{rgb}{0.25,0.5,0}
 \definecolor{titlegray}{Hsb}{0,0,0.8}
+\definecolor{brownsticker}{rgb}{0.55,0.27,0.08}
 
 \newcolumntype{M}[1]{>{\raggedright\arraybackslash}m{#1}}
 %\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -129,7 +130,7 @@
 \smallsection{Vs Preempts} 
 	\X=\takeout\ thru 4\H, cards higher. \CUE=ask stopper.\\
 	\caps{Trf-Leb} after (2x)-\X. (2M)-4m=m+oM. 3\N-4\C=(R) w/\caps{bal}\\
-	Over Multi 2\D: \X=\takeout\ of \S; 2\N=16-19; 4m=\H+m
+	Over Multi 2\D: \X=13-15NT / 17\more; 2\N=16-19; 4m=\H+m
 \smallsection{Vs Artificial Strong Openings} 
 	Over 1m, 1\C-1\D: \X=5-4 MM, 10\more; 1\N=5-5 Mm, 10\more\\
 	\quad1\D\H\S=\caps{destr} 0-15\hcp, 3\more cards, 4\more any other suit;\\
@@ -149,11 +150,12 @@
 \smallsection{Opening Leads Style}
 	\begin{tabular}{ >{\bfseries}p{20mm} p{35mm} p{35mm} }
 		& Lead & In Partner's Suit \\ \midrule
-		Suit & \nth{3}/\nth{5} & \multirow{2}{32mm}{\nth{1}/\nth{3}} \\
+		Suit & \nth{3}/\nth{5} & \multirow{2}{32mm}{\nth{1}/\nth{3}, when count is known: Lo=\caps{enc}} \\
 		NT & \nth{2}/\nth{4} &  \\ 
 		Subseq &  \nth{3}/\caps{att}& \\ 
+		& \multicolumn{2}{l}{(\nth{1})/\nth{2}/\nth{4} through declarer} \\
 	\end{tabular}
-	When count in partner's suit is known: Lo=\caps{enc}
+%	When count in partner's suit is known: Lo=\caps{enc}
 \smallsection{Leads}
 	\begin{tabular}{ >{\bfseries}p{20mm} p{35mm} p{35mm} }
 		& Vs Suit & Vs NT \\ \midrule
@@ -170,13 +172,13 @@
 \smallsection{Signals in Order of Priority}\vspace{-.5ex}
 	\begin{tabular}{ >{\bfseries}p{10mm} p{7mm}  p{27mm}  p{27mm}  p{19mm} }
 		& & Partner's Lead & Declarer's Lead & Discarding \\ \midrule
-		\multirow{3}{*}{Suit}& 1 & Lo=\caps{enc} or xx & Hi=\caps{even} & S/P\\ 
+		\multirow{3}{*}{Suit}& 1 & Lo=\caps{enc} or xx & Hi=\caps{even} & Odd/Even\\ 
 		 & 2 & Hi=\caps{even} & & Hi=\caps{even} \\ 
-		& 3 & S/P & & \\ \midrule
-		\multirow{2}{*}{NT} & 1 & Lo=\caps{enc} & Smith: Hi=\caps{enc} & S/P\\ 
+		& 3 & Suit Pref & & \\ \midrule
+		\multirow{2}{*}{NT} & 1 & Lo=\caps{enc} & Smith: Hi=\caps{enc} & Odd/Even\\ 
 		& 2 & Hi=\caps{even}& Hi=\caps{even} & Hi=\caps{even}\\ \midrule
 	\end{tabular}\\
-	Italian S/P: odd=\caps{enc}, even=Hi/Lo\\\vspace{.5ex}
+	Odd/Even: odd=\caps{enc}, even=Hi/Lo\\\vspace{.5ex}
 \section*{Doubles}
 \smallsection{Takeout Doubles} 
 	11-15 negative or 16\more any; Equal level conversion to \D \& \H.\\
@@ -197,9 +199,9 @@
 \begin{minipage}[t]{90mm}
 \section*{Wbf Convention Card \includegraphics[width=4mm]{logo.png}}\ \\
 \begin{tabular}{p{20mm}p{70mm}}
-\textbf{\caps{Category}} & \mbox{\color{spadecolor}Ranna ruutu} \\
+\textbf{\caps{Category}} & \mbox{\color{spadecolor}Strong club} with \bs \\
 \textbf{\caps{Country}} & { \makebox[5mm]{\raisebox{-1mm}[0pt][0pt]{\includegraphics[width=5mm]{estonia.png}}}} Estonia \\
-\textbf{\caps{Version}} & 2021-09, latest version \href{https://github.com/nigulh/ccf/raw/master/nigul_toomere.pdf}{here}\\
+\textbf{\caps{Version}} & 2022-05, latest version \href{https://github.com/nigulh/ccf/raw/master/nigul_toomere.pdf}{here}\\
 \textbf{\caps{Players}} & Hendrik {Nigul} (\caps{n/e}) --- Taavi {Toomere} (\caps{s/w}) \\
 \end{tabular}
 \section*{System Summary}
@@ -214,9 +216,9 @@
 	~\\
 \smallsection{Special Bids That May Require Defence} 
 	1\D=(0)1\more\D, 11-15\\
-	2\D=Wilkosz 5M-(4)5 any, 5-10\\
+	2\D=Wilkosz 5M-(4)5 any, 5-10; \bs \\
 	3\N=Gambling (max Q outside)\\
-	After 1\N=[9-14]: no transfers, 2\C\D may contain 6M\\
+	After 1\N=[9-14]: no transfers, 2\C\D=[R], up to \INV/\GF \\
 	1\D-2\H=5\S4\more\H, less than invite\\
 	1\S-3\C=\INV, either a) 6\more\H; or b) 5\H+3\S\\
 	~\\
@@ -241,11 +243,13 @@
 \toprule
 	\cellcolor{titlecellgray} & \makebox[\widthof{\textbf{Open}}-8mm][r]{\cellcolor{titlecellgray}\textbf{Open}} &\cellcolor{titlecellgray}\textbf{Min Crd} & \cellcolor{titlecellgray} \textbf{Neg Dbl} & \cellcolor{titlecellgray} \textbf{Description} & \cellcolor{titlecellgray} \textbf{Responses} & \cellcolor{titlecellgray} \textbf{Subsequent Auction} & \cellcolor{titlecellgray} \textbf{Passed Hand Bidding} \\
 \midrule
-	1\C  & \alert & 0 &4\H& a) \caps{Bal} \NV16\more\ \VUL17\more\newline b) \caps{Unbal} (12)16\more/4$^-$ losers 
+	1\C  & \alert & 0 &4\H& 
+a) \caps{Bal} \NV:\ 16\more [3/4] 18\more;\ \VUL: 17\more\newline b) \caps{Unbal} (12)16\more/4$^-$ losers 
 		& 1\D=0-7; 1\H\S2\C\D=5-cards, 8\more; 1\N=8-11/14\more; \newline2\H\S=6-cards, 4-7; 2\N=12-13; 3\C\D\H\S=8\more, 4441
 		& 1\C-1\D-1\H/\S=4\more, F1\rightarrow 2\C/\D=6-7, 0-2/3\caps{supp};\newline 2\C/\D=\NF; 2\H=23\more\N\ or \GF\C/\D; 2\S=20\more (4441) 
 		& \\ 
-	1\D & \alert & (0)1 &4\H&a) \caps{Bal} \VUL:  11-13, [3/4] 12-14 \newline\indent\quad\NV: [1/2] 13-15, [3/4] 15-17\newline b) \caps{Unbal} 11-15 4\more{\D}/441\D4 
+	1\D & \alert & (0)1 &4\H&
+a) \caps{Bal} \VUL:  11-13, [3/4] 12-14 \newline\indent\quad\NV: [1/2] 13-15, [3/4] 15-17\newline b) \caps{Unbal} 11-15 4\more{\D}/441\D4 
 		& 1\H\S=4\more cards, F1; 1\N/2\N=\NAT; 2\C\D=4\more F1;\newline2\H=5\S4\more H \PRE; 2\S3\D=\PRE; 3\C=5-4 mm \PRE, 3\H\S=\INV
 		& 1\D-1M-1X-?: 2\C=\caps{pup} 2\D (\INV); 2\D=\GF\ relay; \newline 2\N=\C\newline 1\D-2m-2\H=\caps{Bal}; 2\S=4m w/singleton; 2\N=1m444;
 		& 2\D is still \GF \\ 
@@ -253,7 +257,9 @@
 		& After 2\N: \NAT\ responses, 3\S\more=\caps{Spl}
 		& Fit-jumps \\  
 	1\S &&5&4\H&11-15&2\N=\GF; 3\C=\H\INV; 3\D=mixed raise; \newline3\H=3\caps{supp} \caps{Bal} \INV & \\  
-	1\N~\NV&&&4\H&[1/2] (9)10-12, [3/4] 10/12-14
+	1\N~\NV&&&4\H&
+[1/2 vs \VUL]: 9-12, [3]: 10-14,\newline[1/2 vs \NV]: 10-12,
+ [4]: 12-14
 		&2\C=\caps{Stay}; 2\D=\caps{\GF-(R)}; 2\H\S3\C\H\S=\NF;\newline3\D=5-5 MM \caps{g/t} or \caps{s/t}; 2NT=a) weak 6\D; b) 5-4 mm 
 		&Weak bids after 2\C: 2\D\rightarrow 2\H\S3\C, 2\H\rightarrow2\S, 2\S\rightarrow 3\C\D, rest=\caps{Inv}; 2\N+3M=short w/mm
 		&\\ 
