@@ -145,7 +145,7 @@
 \myendrule
 \end{minipage}
 \hfill
-\begin{minipage}[t]{90mm}
+\begin{minipage}[t]{96mm}
 \section*{Leads and Signals}
 \smallsection{Opening Leads Style}
 	\begin{tabular}{ >{\bfseries}p{20mm} p{35mm} p{35mm} }
@@ -157,7 +157,7 @@
 	\end{tabular}
 %	When count in partner's suit is known: Lo=\caps{enc}
 \smallsection{Leads}
-	\begin{tabular}{ >{\bfseries}p{20mm} p{35mm} p{35mm} }
+	\begin{tabular}{ >{\bfseries}p{20mm} p{38mm} p{38mm} }
 		& Vs Suit & Vs NT \\ \midrule
 		Ace & Ax, AK+ & Asks \caps{att}\\ 
 		King &  KQ+, AKxxx & Asks count or unblock\\ 
@@ -170,7 +170,7 @@
 	\end{tabular}
 \vspace{-1ex}
 \smallsection{Signals in Order of Priority}\vspace{-.5ex}
-	\begin{tabular}{ >{\bfseries}p{10mm} p{7mm}  p{27mm}  p{27mm}  p{19mm} }
+	\begin{tabular}{ >{\bfseries}p{10mm} p{7mm}  p{29mm}  p{29mm}  p{21mm} }
 		& & Partner's Lead & Declarer's Lead & Discarding \\ \midrule
 		\multirow{3}{*}{Suit}& 1 & Lo=\caps{enc} or xx & Hi=\caps{even} & Odd/Even\\ 
 		 & 2 & Hi=\caps{even} & & Hi=\caps{even} \\ 
@@ -178,11 +178,11 @@
 		\multirow{2}{*}{NT} & 1 & Lo=\caps{enc} & Smith: Hi=\caps{enc} & Odd/Even\\ 
 		& 2 & Hi=\caps{even}& Hi=\caps{even} & Hi=\caps{even}\\ \midrule
 	\end{tabular}\\
-	Odd/Even: odd=\caps{enc}, even=Hi/Lo\\\vspace{.5ex}
+	Odd/Even: odd=\caps{enc}, even=suit pref; Smith vs \N: Hi=like lead\\\vspace{.5ex}
 \section*{Doubles}
 \smallsection{Takeout Doubles} 
 	11-15 negative or 16\more any; Equal level conversion to \D \& \H.\\
-	\CUE=F1, jump to \nth{2}=8-10, 5-cards; (2x)-\X-2NT=\caps{Trf-Leb}\\
+	\CUE=F1, jump to \nth{2}=8-10, 5-cards; (2x)-\X-2\N=\caps{Trf-Leb}\\
 	Reopen: \takeout\ 9-14 or 15\more
 \smallsection{Miscellaneous Doubles/Redoubles}
 	\takeout\ thru 4\H, higher=cards; 1\D-(1\H)-\X=4\S\\
@@ -196,13 +196,15 @@
 \myendrule
 \end{minipage}
 \hfill
-\begin{minipage}[t]{90mm}
+\begin{minipage}[t]{82mm}
 \section*{Wbf Convention Card \includegraphics[width=4mm]{logo.png}}\ \\
-\begin{tabular}{p{20mm}p{70mm}}
+\begin{tabular}{p{20mm}p{62mm}}
 \textbf{\caps{Category}} & \mbox{\color{spadecolor}Strong club} with \bs \\
 \textbf{\caps{Country}} & { \makebox[5mm]{\raisebox{-1mm}[0pt][0pt]{\includegraphics[width=5mm]{estonia.png}}}} Estonia \\
-\textbf{\caps{Version}} & 2022-05, latest version \href{https://github.com/nigulh/ccf/raw/master/nigul_toomere.pdf}{here}\\
-\textbf{\caps{Players}} & Hendrik {Nigul} (\caps{n/e}) --- Taavi {Toomere} (\caps{s/w}) \\
+\textbf{\caps{Version}} & 2022-05
+, latest version \href{https://github.com/nigulh/ccf/raw/master/nigul_toomere.pdf}{here}
+\\
+\textbf{\caps{Players}} & Hendrik {Nigul} (\caps{n/e})\\ & Taavi {Toomere} (\caps{s/w}) \\
 \end{tabular}
 \section*{System Summary}
 \smallsection{General Approach and Style}
@@ -314,23 +316,25 @@ Transfers after 1\D-(1\H)-?\\
 %~\\
 %\myendrule
 \end{minipage}
-\hfill
-\rotatebox{90}{\hspace{-57mm}\begin{minipage}[t]{57mm}
-\raggedleft\small
-\renewcommand{\arraystretch}{1.25}
-\begin{tabular}[t]{@{}m{3.6em}R{2.2em}R{3em}R{3em}R{3em}R{3em}@{}}\toprule
-VP & \multicolumn{5}{c}{Imps for boards} \\\cmidrule{2-6}
- & 1 & 6 & 8 & 10 & 16 \\ \midrule
-11:9 & 0,8 & 2,0 & 2,3 & 2,6 & 3,3 \\
-12:8 & 1,7 & 4,2 & 4,9 & 5,4 & 6,9 \\
-13:7 & 2,7 & 6,6 & 7,6 & 8,6 & 10,8 \\
-14:6 & 3,8 & 9,3 & 10,7 & 12,0 & 15,2 \\
-15:5 & 5,0 & 12,2 & 14,1 & 15,8 & 20,0 \\
-16:4 & 6,4 & 15,6 & 18,0 & 20,1 & 25,5 \\
-17:3 & 8,0 & 19,5 & 22,5 & 25,1 & 31,8 \\
-18:2 & 9,8 & 24,0 & 27,8 & 31,0 & 39,3 \\
-19:1 & 12,1 & 29,6 & 34,2 & 38,2 & 48,3 \\
-20:0 & 15,0 & 36,7 & 42,4 & 47,4 & 60,0 \\ \bottomrule
+\hfill\hfill
+\rotatebox{0}{\hspace{-17mm}\begin{minipage}[t]{66mm}
+\smallsection{Imps for VP}
+\raggedleft\small%
+\renewcommand{\arraystretch}{1.22}%
+\vspace{-1mm}
+\begin{tabular}[t]{@{}m{3.6em}R{2.2em}R{3em}R{3em}R{3em}R{3em}R{3em}@{}}%\toprule
+%VP & \multicolumn{5}{c}{Imps for boards} \\\cmidrule{2-7}
+VP & 1 & 6 & 8 & 10 & 16 & 20 \\ \midrule
+11:9 & 0,8 & 2,0 & 2,3 & 2,6 & 3,3 & 3,7 \\
+12:8 & 1,7 & 4,2 & 4,9 & 5,4 & 6,9 & 7,7 \\
+13:7 & 2,7 & 6,6 & 7,6 & 8,6 & 10,8 & 12,1 \\
+14:6 & 3,8 & 9,3 & 10,7 & 12,0 & 15,2 & 16,9 \\
+15:5 & 5,0 & 12,2 & 14,1 & 15,8 & 20,0 & 22,4 \\
+16:4 & 6,4 & 15,6 & 18,0 & 20,1 & 25,5 & 28,5 \\
+17:3 & 8,0 & 19,5 & 22,5 & 25,1 & 31,8 & 35,6 \\
+18:2 & 9,8 & 24,0 & 27,8 & 31,0 & 39,3 & 43,9 \\
+19:1 & 12,1 & 29,6 & 34,2 & 38,2 & 48,3 & 54,1 \\
+20:0 & 15,0 & 36,7 & 42,4 & 47,4 & 60,0 & 67,1 \\ \bottomrule
 \end{tabular}
 \end{minipage}
 }
