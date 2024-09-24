@@ -89,6 +89,7 @@
 }
 \titlespacing{\subsection}{0pt}{-2ex}{*0}
 \newcommand{\smallsection}[1]{\vspace{-1ex}\subsection*{#1}\raggedright}
+\newcommand{\latestversion}{~ latest version \href{https://github.com/nigulh/ccf/raw/master/nigul_toomere.pdf}{here}}
 
 \setlength{\parindent}{0pt}
 \setlength\tabcolsep{0pt}
@@ -134,25 +135,25 @@
 \smallsection{Vs Artificial Strong Openings} 
 	Over 1m, 1\C-1\D: \X=5-4 MM, 10\more; 1\N=5-5 Mm, 10\more\\
 	\quad1\D\H\S=\caps{destr} 0-15\hcp, 3\more cards, 4\more any other suit;\\
-	\quad2\C=minors; 2\N=good hand w/ one-suiter or minors\\
-	Over 2m: \X=MM; 2\N=mm
+	\quad2\C/2\S=NF/F 1m; 2\D/\H=F/NF 1M ; 2\N=mm\\
+	Over 2\C: \X/2\D=3\more \C/\D, 5\more any; 2\H=MM; 2\S/\N=crash
 \smallsection{Over Opponents' Takeout Double}
 	1\C-(\X): \XX=\NAT\ \GF; 1\D=5-8\rightarrow\NAT\ continuations\\
 	1\D-(\X): \XX/1\H/\S/\N/\C = \caps{Trf}; 2NT=minors; 3x=\INV \\
 	1M-(\X): \XX/1\N\ldots2M-1=\caps{Trf}; 2M=bad raise; 2NT=fit\\
 	1\N(14-17)-(\X): system on\\
-	1\N(10-14)-(\X): \PASS=\C/\D/\H+\S; 2m=m+higher\\
+	1\N(10-14)-(\X): \PASS=1m or \H+\S; 2m=m+higher\\
 \myendrule
 \end{minipage}
 \hfill
 \begin{minipage}[t]{96mm}
 \section*{Leads and Signals}
 \smallsection{Opening Leads Style}
-	\begin{tabular}{ >{\bfseries}p{20mm} p{35mm} p{35mm} }
+	\begin{tabular}{ >{\bfseries}p{20mm} p{30mm} p{46mm} }
 		& Lead & In Partner's Suit \\ \midrule
-		Suit & \nth{3}/\nth{5} & \multirow{2}{32mm}{\nth{1}/\nth{3}, when count is known: Lo=\caps{enc}} \\
+		Suit & \nth{1}/\nth{3}/\nth{5} & \multirow{2}{40mm}{\textbf{Ternary}: Xx, xxX, xXxx, XxxXx (\nth{1}/\nth{4} from 5)} \\
 		NT & \nth{2}/\nth{4} &  \\ 
-		Subseq &  \nth{3}/\caps{att}& \\ 
+		Subseq &  \nth{3}/\caps{att}& Ternary \\ 
 		& \multicolumn{2}{l}{(\nth{1})/\nth{2}/\nth{4} through declarer} \\
 	\end{tabular}
 %	When count in partner's suit is known: Lo=\caps{enc}
@@ -165,20 +166,21 @@
 		Jack & JT+, KJ10+ & J10+, HJ10+ \\ 
 		10 & 109+, H109+ & 109+, H109+\\ 
 		9 & KJ9, 9x & H9x \\ 
-		Hi-x & Xx, xxxx & HXx, xXx, xXxx \\ 
+		Hi-x & Xx, XxXx & HXx, xXx, xXxx \\ 
 		Lo-x & xxX, HxX & xX, HxxX(x) \\
+		Pd suit & \multicolumn{2}{l}{Ternary: Xx, xxX, xXxx, XxxXx} \\
 	\end{tabular}
-\vspace{-1ex}
+\vspace{-0.3ex}
 \smallsection{Signals in Order of Priority}\vspace{-.5ex}
-	\begin{tabular}{ >{\bfseries}p{10mm} p{7mm}  p{29mm}  p{29mm}  p{21mm} }
+	\begin{tabular}{ >{\bfseries}p{1mm} p{7mm}  p{29mm}  p{35mm}  p{24mm} }
 		& & Partner's Lead & Declarer's Lead & Discarding \\ \midrule
-		\multirow{3}{*}{Suit}& 1 & Lo=\caps{enc} or xx & Hi=\caps{even} & Odd/Even\\ 
-		 & 2 & Hi=\caps{even} & & Hi=\caps{even} \\ 
-		& 3 & Suit Pref & & \\ \midrule
-		\multirow{2}{*}{NT} & 1 & Lo=\caps{enc} & Smith: Hi=\caps{enc} & Odd/Even\\ 
-		& 2 & Hi=\caps{even}& Hi=\caps{even} & Hi=\caps{even}\\ \midrule
+		\multirow{3}{*}{}& 1 & Lo=\caps{enc} or xx & Smith vs \N: Hi=\caps{enc} & 
+\multirow{2}{*}{\parbox{24mm}{Odd=\caps{enc}, Even=suit pref}}\\ 
+		 & 2 & Hi=\caps{even} &  Hi=\caps{even} &  \\ 
+		& 3 & Suit Pref & & Hi=\caps{even} \\ \midrule
 	\end{tabular}\\
-	Odd/Even: odd=\caps{enc}, even=suit pref; Smith vs \N: Hi=like lead\\\vspace{.5ex}
+In Pd suit possibly Ternary count
+\\\vspace{1.2ex}
 \section*{Doubles}
 \smallsection{Takeout Doubles} 
 	11-15 negative or 16\more any; Equal level conversion to \D \& \H.\\
@@ -201,8 +203,8 @@
 \begin{tabular}{p{20mm}p{62mm}}
 \textbf{\caps{Category}} & \mbox{\color{spadecolor}Strong club} with multi \\
 \textbf{\caps{Country}} & { \makebox[5mm]{\raisebox{-1mm}[0pt][0pt]{\includegraphics[width=5mm]{estonia.png}}}} Estonia \\
-\textbf{\caps{Version}} & 2022-10
-, latest version \href{https://github.com/nigulh/ccf/raw/multi/nigul_toomere.pdf}{here}
+\textbf{\caps{Version}} & 2024-09
+\latestversion
 \\
 \textbf{\caps{Players}} & Hendrik {Nigul} (\caps{n/e})\\ & Taavi {Toomere} (\caps{s/w}) \\
 \end{tabular}
@@ -247,7 +249,7 @@
 	\cellcolor{titlecellgray} & \makebox[\widthof{\textbf{Open}}-8mm][r]{\cellcolor{titlecellgray}\textbf{Open}} &\cellcolor{titlecellgray}\textbf{Min Crd} & \cellcolor{titlecellgray} \textbf{Neg Dbl} & \cellcolor{titlecellgray} \textbf{Description} & \cellcolor{titlecellgray} \textbf{Responses} & \cellcolor{titlecellgray} \textbf{Subsequent Auction} & \cellcolor{titlecellgray} \textbf{Passed Hand Bidding} \\
 \midrule
 	1\C  & \alert & 0 &4\D& 
-a) \caps{Bal} \NV:\ 16\more, [3/4] 18\more;\ \VUL: 17\more\newline b) \caps{Unbal} (12)16\more/4$^-$ losers 
+a) \caps{Bal} \NV:\ 16\more, [3/4] 18\more;\ \VUL: 17\more\newline b) \caps{Unbal} (13)16\more/4$^-$ losers
 		& 1\D=0-7; 1\H\S2\C\D=5-cards, 8\more; 1\N=8-11/14\more; \newline2\H\S=6-cards, 4-7; 2\N=12-13; 3\C\D\H\S=8\more, 4441
 		& 1\C-1\D-1\H/\S=4\more, F1\rightarrow 2\C/\D=6-7, 0-2/3\caps{supp};\newline 2\C/\D=\NF; 2\H=23\more\N\ or \GF\C/\D; 2\S=20\more (4441) 
 		& \\ 
@@ -261,8 +263,8 @@ a) \caps{Bal} \VUL:  11-13, [3/4] 12-14 \newline\indent\quad\NV: [1/2] 13-15, [3
 		& Fit-jumps \\  
 	1\S &&5&4\H&11-15&2\N=\GF; 3\C=\H\INV; 3\D=mixed raise; \newline3\H=3\caps{supp} \caps{Bal} \INV & \\  
 	1\N~\NV&&&4\H&
-[1/2 vs \VUL]: 9-12, [3]: 10-14,\newline[1/2 vs \NV]: 10-12,
- [4]: 12-14
+[\nth{1}\nth{2} vs \NV/\VUL]: 9/10-12\newline[\nth{3}]: 10-14,
+ [\nth{4}]: 12-14
 		&2\C=\caps{Stay}; 2\D=\caps{\GF-(R)}; 2\H\S3\C\H\S=\NF;\newline3\D=5-5 MM \caps{g/t} or \caps{s/t}; 2NT=a) weak 6\D; b) 5-4 mm 
 		&Weak bids after 2\C: 2\D\rightarrow 2\H\S3\C, 2\H\rightarrow2\S, 2\S\rightarrow 3\C\D, rest=\caps{Inv}; 2\N+3M=short w/mm
 		&\\ 
@@ -325,19 +327,19 @@ Transfers after 1\D-(1\H)-?\\
 \raggedleft\small%
 \renewcommand{\arraystretch}{1.22}%
 \vspace{-1mm}
-\begin{tabular}[t]{@{}m{3.6em}R{2.2em}R{3em}R{3em}R{3em}R{3em}R{3em}@{}}%\toprule
+\begin{tabular}[t]{@{}>{\bfseries}m{3.6em}R{2.2em}R{3em}R{3em}R{3em}R{3em}R{3em}@{}}%\toprule
 %VP & \multicolumn{5}{c}{Imps for boards} \\\cmidrule{2-7}
 VP & 1 & 6 & 8 & 10 & 16 & 20 \\ \midrule
 11:9 & 0,8 & 2,0 & 2,3 & 2,6 & 3,3 & 3,7 \\
 12:8 & 1,7 & 4,2 & 4,9 & 5,4 & 6,9 & 7,7 \\
 13:7 & 2,7 & 6,6 & 7,6 & 8,6 & 10,8 & 12,1 \\
 14:6 & 3,8 & 9,3 & 10,7 & 12,0 & 15,2 & 16,9 \\
-15:5 & 5,0 & 12,2 & 14,1 & 15,8 & 20,0 & 22,4 \\
+15:5 & 5\phantom{,0} & 12,2 & 14,1 & 15,8 & 20\phantom{,0} & 22,4 \\
 16:4 & 6,4 & 15,6 & 18,0 & 20,1 & 25,5 & 28,5 \\
 17:3 & 8,0 & 19,5 & 22,5 & 25,1 & 31,8 & 35,6 \\
 18:2 & 9,8 & 24,0 & 27,8 & 31,0 & 39,3 & 43,9 \\
 19:1 & 12,1 & 29,6 & 34,2 & 38,2 & 48,3 & 54,1 \\
-20:0 & 15,0 & 36,7 & 42,4 & 47,4 & 60,0 & 67,1 \\ \bottomrule
+20:0 & 15\phantom{,0} & 36,7 & 42,4 & 47,4 & 60\phantom{,0} & 67,1 \\ \bottomrule
 \end{tabular}
 \end{minipage}
 }
