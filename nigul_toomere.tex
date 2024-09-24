@@ -149,11 +149,11 @@
 \begin{minipage}[t]{96mm}
 \section*{Leads and Signals}
 \smallsection{Opening Leads Style}
-	\begin{tabular}{ >{\bfseries}p{20mm} p{35mm} p{35mm} }
+	\begin{tabular}{ >{\bfseries}p{20mm} p{30mm} p{46mm} }
 		& Lead & In Partner's Suit \\ \midrule
-		Suit & \nth{3}/\nth{5} & \multirow{2}{32mm}{\nth{1}/\nth{3}, when count is known: Lo=\caps{enc}} \\
+		Suit & \nth{1}/\nth{3}/\nth{5} & \multirow{2}{40mm}{\textbf{Ternary}: Xx, xxX, xXxx, XxxXx (\nth{1}/\nth{4} from 5)} \\
 		NT & \nth{2}/\nth{4} &  \\ 
-		Subseq &  \nth{3}/\caps{att}& \\ 
+		Subseq &  \nth{3}/\caps{att}& Ternary \\ 
 		& \multicolumn{2}{l}{(\nth{1})/\nth{2}/\nth{4} through declarer} \\
 	\end{tabular}
 %	When count in partner's suit is known: Lo=\caps{enc}
@@ -166,20 +166,21 @@
 		Jack & JT+, KJ10+ & J10+, HJ10+ \\ 
 		10 & 109+, H109+ & 109+, H109+\\ 
 		9 & KJ9, 9x & H9x \\ 
-		Hi-x & Xx, xxxx & HXx, xXx, xXxx \\ 
+		Hi-x & Xx, XxXx & HXx, xXx, xXxx \\ 
 		Lo-x & xxX, HxX & xX, HxxX(x) \\
+		Pd suit & \multicolumn{2}{l}{Ternary: Xx, xxX, xXxx, XxxXx} \\
 	\end{tabular}
-\vspace{-1ex}
+\vspace{-0.3ex}
 \smallsection{Signals in Order of Priority}\vspace{-.5ex}
-	\begin{tabular}{ >{\bfseries}p{10mm} p{7mm}  p{29mm}  p{29mm}  p{21mm} }
+	\begin{tabular}{ >{\bfseries}p{1mm} p{7mm}  p{29mm}  p{35mm}  p{24mm} }
 		& & Partner's Lead & Declarer's Lead & Discarding \\ \midrule
-		\multirow{3}{*}{Suit}& 1 & Lo=\caps{enc} or xx & Hi=\caps{even} & Odd/Even\\ 
-		 & 2 & Hi=\caps{even} & & Hi=\caps{even} \\ 
-		& 3 & Suit Pref & & \\ \midrule
-		\multirow{2}{*}{NT} & 1 & Lo=\caps{enc} & Smith: Hi=\caps{enc} & Odd/Even\\ 
-		& 2 & Hi=\caps{even}& Hi=\caps{even} & Hi=\caps{even}\\ \midrule
+		\multirow{3}{*}{}& 1 & Lo=\caps{enc} or xx & Smith vs \N: Hi=\caps{enc} & 
+\multirow{2}{*}{\parbox{24mm}{Odd=\caps{enc}, Even=suit pref}}\\ 
+		 & 2 & Hi=\caps{even} &  Hi=\caps{even} &  \\ 
+		& 3 & Suit Pref & & Hi=\caps{even} \\ \midrule
 	\end{tabular}\\
-	Odd/Even: odd=\caps{enc}, even=suit pref; Smith vs \N: Hi=like lead\\\vspace{.5ex}
+In Pd suit possibly Ternary count
+\\\vspace{1.2ex}
 \section*{Doubles}
 \smallsection{Takeout Doubles} 
 	11-15 negative or 16\more any; Equal level conversion to \D \& \H.\\
@@ -202,7 +203,7 @@
 \begin{tabular}{p{20mm}p{62mm}}
 \textbf{\caps{Category}} & \mbox{\color{spadecolor}Strong club} with \bs \\
 \textbf{\caps{Country}} & { \makebox[5mm]{\raisebox{-1mm}[0pt][0pt]{\includegraphics[width=5mm]{estonia.png}}}} Estonia \\
-\textbf{\caps{Version}} & 2024-05
+\textbf{\caps{Version}} & 2024-09
 \latestversion
 \\
 \textbf{\caps{Players}} & Hendrik {Nigul} (\caps{n/e})\\ & Taavi {Toomere} (\caps{s/w}) \\
@@ -323,7 +324,7 @@ Transfers after 1\D-(1\H)-?\\
 \raggedleft\small%
 \renewcommand{\arraystretch}{1.22}%
 \vspace{-1mm}
-\begin{tabular}[t]{@{}m{3.6em}R{2.2em}R{3em}R{3em}R{3em}R{3em}R{3em}@{}}%\toprule
+\begin{tabular}[t]{@{}>{\bfseries}m{3.6em}R{2.2em}R{3em}R{3em}R{3em}R{3em}R{3em}@{}}%\toprule
 %VP & \multicolumn{5}{c}{Imps for boards} \\\cmidrule{2-7}
 VP & 1 & 6 & 8 & 10 & 16 & 20 \\ \midrule
 11:9 & 0,8 & 2,0 & 2,3 & 2,6 & 3,3 & 3,7 \\
